@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "GetEmployeeCourse";
+}
+
+<h2>GetEmployeeCourse</h2>
+
+@foreach (var item in Session["CourseList"] as List<string>)//ViewBag.CourseList)
+{
+    <li>@item</li>
+}

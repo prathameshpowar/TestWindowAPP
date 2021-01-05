@@ -1,0 +1,20 @@
+﻿@model TEST_APP_MVC.Models.Employee
+@{
+    ViewBag.Title = "GetEmployeeByID";
+}
+
+<h2>GetEmployeeCourse</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr/>
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.EmployeeName)</dt>
+        <dd>@Html.DisplayFor(model => model.EmployeeName)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.EmployeeID)</dt>
+        <dd>@Html.DisplayFor(model => model.EmployeeID)</dd>
+
+    </dl>
+    
+</div>

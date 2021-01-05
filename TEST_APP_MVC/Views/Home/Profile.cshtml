@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+}
+
+@{
+    Layout = null;
+}
+<meta name="viewport" content="width=device-width" />
+<title>Profile</title>
+<style type="text/css">
+    body {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+</style>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<script type="text/babel">
+    class Hello extends React.Component {
+    render() {
+    return
+    <h1>Hello World!</h1>
+    }
+    }
+
+    ReactDOM.render(
+    <Hello/>, document.getElementById('mydiv'))
+</script>
+
+
+<h2>Profile</h2>
+
+<div>
+    Welcome
+    <b>@HttpContext.Current.User.Identity.Name</b>
+    <br />
+    <br />
+    @using (Html.BeginForm("Logout", "Home", FormMethod.Post))
+    {
+        <a href="javascript:;" onclick="document.forms[0].submit();">Logout</a>
+    }
+</div>
