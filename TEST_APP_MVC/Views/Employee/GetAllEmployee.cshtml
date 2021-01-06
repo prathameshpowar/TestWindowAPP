@@ -1,0 +1,23 @@
+﻿@model IEnumerable<TEST_APP_MVC.Models.Employee>
+@{
+    ViewBag.Title = "GetAllEmployee";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.EmployeeID) </th>
+        <th>@Html.DisplayNameFor(model => model.EmployeeName)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(x => item.EmployeeID)</td>
+            <td>@Html.DisplayFor(x => item.EmployeeName)</td>
+        </tr>
+    }
+</table>
+
+
